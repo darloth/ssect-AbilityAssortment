@@ -1,0 +1,10 @@
+{
+  "id": "dar_abilityassortment",
+  "name": "Ability Assortment",
+  "author": "Darloth",
+  "utility": "false",
+  "version": "0.1.BUILDNUMTAG",
+  "description": "An assortment of new Abilities for use on the campaign map.",
+  "gameVersion": "0.9a",
+  "jars": ["jars/AbilityAssortment.jar"]
+}

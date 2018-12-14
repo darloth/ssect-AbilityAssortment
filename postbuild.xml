@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="abilityassortment">
+
+    <target name="postBuild" description="Do post-build stuff">
+        <property name="mod.output.path" value="X:\Games\Starsector 0.9a\mods\AbilityAssortment"/>
+        <delete dir="${mod.output.path}" />
+        <mkdir dir="${mod.output.path}" />
+        <mkdir dir="${mod.output.path}/data" />
+        <mkdir dir="${mod.output.path}/jars" />
+        <copy file="out/artifacts/AbilityAssortment/AbilityAssortment.jar" todir="${mod.output.path}/jars" />
+        <copy todir="${mod.output.path}/data">
+            <fileset dir="data"/>
+        </copy>
+        <copy file="mod_info.json" todir="${mod.output.path}" />
+        <buildnumber/>
+        <replaceregexp file="${mod.output.path}/mod_info.json"
+                       match="BUILDNUMTAG"
+                       replace="${build.number}"
+                       byline="true"
+        />
+    </target>
+</project>
